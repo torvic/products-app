@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Card from '../../../../common/Card';
 import useRandomTimer from '../../../../hooks/useRandomTimer';
 import styles from './index.module.scss';
@@ -18,13 +19,14 @@ const ProductItem = (props) => {
             <div className={styles.product__timer}>
               <span>{`${timerHours}:${timerMinutes}:${timerSeconds}`}</span>
             </div>
-            <button
+            <Link
+              to={`/products/${product.id}`}
               className={styles.product__button}
               type="button"
               disabled={disabled}
             >
               Go To details
-            </button>
+            </Link>
           </div>
         </Card>
       </div>

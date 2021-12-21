@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import ProductList from './components/ProductList';
 import getProducts from '../../api/products/productAPI';
+import Container from '../../common/Container';
 
 const HomePage = () => {
   const [dbProducts, setDbProducts] = useState(null);
@@ -21,11 +22,11 @@ const HomePage = () => {
     getAllProducts();
   }, []);
   return (
-    <>
+    <Container>
       {loading && <div>Cargando...</div>}
       {error && <div>Ocurrio un error...</div>}
       {dbProducts && <ProductList items={dbProducts} />}
-    </>
+    </Container>
   );
 };
 
