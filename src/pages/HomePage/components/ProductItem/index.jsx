@@ -1,8 +1,10 @@
 import Card from '../../../../common/Card';
+import useRandomTimer from '../../../../hooks/useRandomTimer';
 import styles from './index.module.scss';
 
 const ProductItem = (props) => {
   const { product } = props;
+  const { disabled, timerHours, timerMinutes, timerSeconds } = useRandomTimer();
   return (
     <div className={styles.product}>
       <div className={styles.product__content}>
@@ -14,9 +16,13 @@ const ProductItem = (props) => {
           <p className={styles.product__info}>{product.title}</p>
           <div className={styles.product__actions}>
             <div className={styles.product__timer}>
-              <span>00:00:00</span>
+              <span>{`${timerHours}:${timerMinutes}:${timerSeconds}`}</span>
             </div>
-            <button className={styles.product__button} type="button">
+            <button
+              className={styles.product__button}
+              type="button"
+              disabled={disabled}
+            >
               Go To details
             </button>
           </div>
