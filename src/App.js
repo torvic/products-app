@@ -1,5 +1,29 @@
-function App() {
-  return <h1>Let's start!</h1>
-}
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+} from 'react-router-dom';
 
-export default App
+import HomePage from './pages/HomePage';
+import ProductDetailsPage from './pages/ProductDetailsPage';
+import AboutPage from './pages/AboutPage';
+
+const App = () => (
+  <Router>
+    <Switch>
+      <Route path="/" exact>
+        <HomePage />
+      </Route>
+      <Route path="/product-details">
+        <ProductDetailsPage />
+      </Route>
+      <Route path="/about" exact>
+        <AboutPage />
+      </Route>
+      <Redirect to="/" />
+    </Switch>
+  </Router>
+);
+
+export default App;
