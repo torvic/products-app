@@ -2,6 +2,7 @@ $bp-tablet: 576px;
 $bp-desktop: 1024px;
 
 .list {
+  margin: 32px 0;
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
