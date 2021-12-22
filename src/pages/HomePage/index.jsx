@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ProductList from './components/ProductList';
-import getProducts from '../../api/products/productAPI';
+import { getProducts } from '../../api/products/productAPI';
 import Container from '../../common/Container';
 
 const HomePage = () => {
