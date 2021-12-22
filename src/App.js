@@ -8,9 +8,11 @@ import {
 import HomePage from './pages/HomePage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import AboutPage from './pages/AboutPage';
+import Header from './common/Header';
 
 const App = () => (
   <Router>
+    <Header />
     <Switch>
       <Route path="/" exact>
         <HomePage />
