@@ -1,0 +1,14 @@
+.about {
+  margin: 32px 0;
+  display: flex;
+  &__picture {
+    flex: 1;
+  }
+  &__image {
+    max-width: 400px;
+    border-radius: 50%;
+  }
+  &__info {
+    flex: 1;
+  }
+}
