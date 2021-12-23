@@ -8,12 +8,11 @@ const ProductItem = (props) => {
   const { disabled, timerHours, timerMinutes, timerSeconds } = useRandomTimer();
   return (
     <div className={styles.product}>
-      <div className={styles.product__content}>
-        <Card>
+      <Card>
+        <div className={styles.product__content}>
           <figure className={styles.product__figure}>
             <img className={styles.product__image} src={product.image} alt="" />
           </figure>
-
           <p className={styles.product__info}>{product.title}</p>
           <div className={styles.product__actions}>
             <div className={styles.product__timer}>
@@ -21,15 +20,13 @@ const ProductItem = (props) => {
             </div>
             <Link
               to={`/products/${product.id}`}
-              className={styles.product__button}
-              type="button"
-              disabled={disabled}
+              className={disabled ? `${styles.product__button}` : ''}
             >
               Go To details
             </Link>
           </div>
-        </Card>
-      </div>
+        </div>
+      </Card>
     </div>
   );
 };
