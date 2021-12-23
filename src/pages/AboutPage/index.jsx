@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Container from '../../common/Container';
 import styles from './index.module.scss';
 
@@ -12,23 +15,46 @@ const AboutPage = () => (
             alt="victor"
           />
         </figure>
-        <div>
-          <img src="" alt="" />
-          <span>torvic02st96@gmail.com</span>
+        <hr />
+        <div className={styles.about__email}>
+          <a
+            className={styles.about__link}
+            href="mailto:torvic02st96@gmail.com"
+          >
+            <FontAwesomeIcon icon={faEnvelope} size="2x" />
+            <span className={styles.about__text_spaceSides}>
+              torvic02st96@gmail.com
+            </span>
+          </a>
         </div>
-        <div>
-          <img src="" alt="" />
-          <span>Linkedin</span>
+        <hr />
+        <div className={styles.about__social}>
+          <a
+            className={styles.about__link}
+            href="https://github.com/torvic"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faGithub} size="2x" />
+          </a>
+          <a
+            className={styles.about__link}
+            href="https://www.linkedin.com/in/victor-salcedo-turpo-3171ab12a/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          </a>
         </div>
       </div>
       <div className={styles.about__info}>
-        <h2>Hi there, I&apos;am Victor</h2>
-        <p>
+        <h2 className={styles.about__title}>Hi there, I&apos;am Victor</h2>
+        <p className={styles.about__text}>
           A Full Stack Developer who specializes in JavaScript Technologies
           across the whole stack (MongoDB, Node.js, Express, React). Experience
           building complete web applications with backend API Systems.
         </p>
-        <p>
+        <p className={styles.about__text}>
           I am an incredibly driven individual who enjoys learning, optimizing,
           and incorporating best practices into my work. By having both a
           business and technical background, I bring the strength of an
@@ -36,17 +62,10 @@ const AboutPage = () => (
           presenting ideas, and project management. Outside of work, I am an
           avid runner and enjoy spending time with my family.
         </p>
-        <h2>Skills:</h2>
-        <ul>
-          <li>Javascript</li>
-          <li>Node.js</li>
-          <li>React.js</li>
-          <li>Redux</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Git & Github</li>
-          <li>Scrum</li>
-        </ul>
+        <h2 className={styles.about__title}>I learned in the program:</h2>
+        <p className={styles.about__text}>
+          Javascript, Node.js, React.js, Redux, HTML, CSS, Git, Github & Scrum
+        </p>
       </div>
     </div>
   </Container>

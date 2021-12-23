@@ -1,14 +1,55 @@
 .about {
   margin: 32px 0;
   display: flex;
+  flex-wrap: wrap;
   &__picture {
+    padding: 16px;
     flex: 1;
+  }
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 16px;
+  }
+  &__title {
+    padding-bottom: 8px;
+  }
+  &__text {
+    padding-bottom: 8px;
+    &_spaceSides {
+      padding: 0 8px;
+    }
   }
   &__image {
-    max-width: 400px;
-    border-radius: 50%;
+    max-width: 300px;
   }
   &__info {
+    padding: 16px;
     flex: 1;
+  }
+  &__email {
+    padding: 8px 0;
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+  }
+  &__link {
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+  }
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      padding-left: 32px;
+    }
   }
 }
